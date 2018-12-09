@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="jedisConnectionFactory" class="JedisConnectionFactory">
+        <constructor-arg name="hostName" value="${redis.server.host}"/>
+        <constructor-arg name="port" value="${redis.server.port}"/>
+        <constructor-arg name="password" value="${redis.server.password}"/>
+        <!--<property name="usePool" value="true" />-->
+    </bean>
+
+    <!--<bean id="jedisConnFactory" class="JedisConnectionFactory" init-method="init">-->
+        <!--<property name="hostName" value="${redis.server.host}"/>-->
+        <!--<property name="port" value="${redis.server.port}"/>-->
+        <!--<property name="password" value="${redis.server.password}"/>-->
+    <!--</bean>-->
+
+</beans>
