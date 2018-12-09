@@ -19,9 +19,9 @@ public class RedisLockServiceImpl implements RedisLockService{
     private static final Logger LOGGER = LoggerFactory.getLogger(RedisLockServiceImpl.class);
     @Resource
     private RedisTemplate redisTemplate;
-    //默认锁10分钟
     private long defaultLockTimeMillis = 10 * 60 * 1000;
-    //默认等待间隔时间1s
+
+
     private long defaultTryLockIntervalMillis = 1000;
 
     /**
@@ -36,13 +36,6 @@ public class RedisLockServiceImpl implements RedisLockService{
     }
 
     /**
-     * 根据key加锁
-     * 1. 尝试加锁，并设置value为当前时间+失效时间，如果存在，则加锁失败，不存在则加锁成功
-     * 2. key已经存在，获取当前的锁失效时间，如果返回nil，则表明锁被删除，返回失败，如果非空，则继续
-     * 3. 如果锁未过去，则返回获取锁失败，如果超时，则继续
-     * 4. 设置key的value为当前时间+失效时间
-     * 5. 如果返回nil，则表明锁之前被清理，获取锁成功；如果返回超时时间与前面获取锁的超时时间相同，则获取锁成功；如果不相同，则锁被其他实例获取，返回失败。
-     *
      * @param key
      * @param lockMillis
      * @return
