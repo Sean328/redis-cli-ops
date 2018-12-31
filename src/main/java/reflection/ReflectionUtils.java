@@ -1,12 +1,10 @@
-package common;
+package reflection;
 
-import exception.ReflectionException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
 
 /**
  * @author lixin
@@ -61,8 +59,8 @@ public class ReflectionUtils {
     /**
      * 通过该方式获得方法有以下局限，需谨慎使用
      * <p>1. 该方法支持参数数组中有null类型参数，但是当有null类型时，该方法如果有重载方法，且参数数量一致，参数排序除了null参数位置为其他
-     * 参数位置一致，那么采用此方法不能精确的获得目标方法。如果想避免此类情况发生，则定义重载方法时避免上述定义情景，或者不使用该方法。</p>
-     * <p>2. 该方法目前不支持获取实现接口中的方法，当调用方向传入interface的实现类并向获得接口中的default类型方法时，无效</p>
+     * 参数位置一致，那么采用此方法不能精确的获得目标方法。如果想避免此类情况发生，则定义重载方法时避免上述定义情景，或者不使用该方法。
+     * <p>2. 该方法目前不支持获取实现接口中的方法，当调用方向传入interface的实现类并向获得接口中的default类型方法时，无效。
      *
      * @param clazz
      * @param methodName

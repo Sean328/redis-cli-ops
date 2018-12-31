@@ -28,7 +28,7 @@ public class ThreadPoolService {
         }
     };
 
-    private ThreadPoolExecutor defaultThreadPool = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.SECONDS,
+    ThreadPoolExecutor defaultThreadPool = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.SECONDS,
             workQueue,new DefaultThreadFactory(),rejectHandler);
 
     private ThreadPoolService() {

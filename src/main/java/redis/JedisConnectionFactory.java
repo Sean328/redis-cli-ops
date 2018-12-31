@@ -1,16 +1,20 @@
+package redis;
+
+import com.alibaba.fastjson.JSON;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
+import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
 /**
  * @author sean
  * @date 2018/12/09/1:49
  **/
-public class JedisConnectionFactory {
+public class JedisConnectionFactory extends Jedis {
 
-    private JedisPool jedisPool;
-    private String hostName;
-    private String port;
-    private String password;
+    protected JedisPool jedisPool;
+    protected String hostName;
+    protected String port;
+    protected String password;
 
     public JedisConnectionFactory(String hostName, String port, String password) {
         this.hostName = hostName;
@@ -28,6 +32,10 @@ public class JedisConnectionFactory {
     }
 
     public void init(){
+//        this.hostName = hostName;
+//        this.port = port;
+//        this.password = password;
+
         jedisPool = new JedisPool(new GenericObjectPoolConfig(),hostName, Integer.valueOf(port));
     }
 
@@ -57,5 +65,10 @@ public class JedisConnectionFactory {
     public JedisConnectionFactory setPassword(String password) {
         this.password = password;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return JSON.toJSONString(this);
     }
 }
