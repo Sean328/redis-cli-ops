@@ -2,6 +2,8 @@ import com.sean.JedisCli;
 import com.sean.JedisClusterCli;
 import com.sean.dao.ThreadPoolDao;
 import com.sean.domain.ThreadPoolEntity;
+import com.xxl.JedisCli;
+import com.xxl.JedisClusterCli;
 import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.data.redis.core.RedisTemplate;

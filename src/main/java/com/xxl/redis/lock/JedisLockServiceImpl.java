@@ -1,6 +1,7 @@
 package com.xxl.redis.lock;
 
-import com.sean.redis.JedisConnectionFactory;
+
+import com.xxl.redis.JedisConnectionFactory;
 
 import javax.annotation.Resource;
 

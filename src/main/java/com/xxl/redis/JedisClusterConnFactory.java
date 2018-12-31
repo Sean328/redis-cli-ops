@@ -1,7 +1,7 @@
 package com.xxl.redis;
 
-import com.sean.redis.strategy.HashShardingStrategy;
-import com.sean.redis.strategy.ShardingStrategy;
+import com.xxl.redis.strategy.HashShardingStrategy;
+import com.xxl.redis.strategy.ShardingStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;

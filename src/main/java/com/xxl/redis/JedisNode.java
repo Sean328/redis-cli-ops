@@ -1,14 +1,14 @@
 package com.xxl.redis;
 
-import com.sean.redis.strategy.RoundRobinSelectStrategy;
-import com.sean.redis.strategy.SelectStrategy;
+import com.xxl.redis.strategy.RoundRobinSelectStrategy;
+import com.xxl.redis.strategy.SelectStrategy;
 import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
 import redis.clients.jedis.JedisPool;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.sean.redis.JedisClusterConnFactory.HOST_PORT_SEPARATOR;
+import static com.xxl.redis.JedisClusterConnFactory.HOST_PORT_SEPARATOR;
 
 /**
  * @author lixin

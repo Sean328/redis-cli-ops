@@ -1,5 +1,5 @@
 
-import domain.ThreadPoolEntity;
+import com.xxl.domain.ThreadPoolEntity;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

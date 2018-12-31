@@ -1,6 +1,6 @@
 package com.xxl.reflection;
 
-import com.sean.threadpool.ThreadPoolUtils;
+import com.xxl.threadpool.ThreadPoolUtils;
 
 import javax.management.ReflectionException;
 import java.util.concurrent.ExecutionException;
