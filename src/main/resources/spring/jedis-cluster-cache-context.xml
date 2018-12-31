@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="jedisClusterConnFactory" class="com.sean.JedisClusterCli" init-method="init">
+    <bean id="jedisClusterConnFactory" class="com.xxl.JedisClusterCli" init-method="init">
         <property name="connectionStrs">
             <list>
                 <value>${redic.cluster.node.conn1}</value>

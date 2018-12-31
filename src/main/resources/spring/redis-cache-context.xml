@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="jedisConnectionFactory" class="JedisConnectionFactory">
+    <bean id="jedisConnectionFactory" class="com.xxl.redis.JedisConnectionFactory">
         <constructor-arg name="hostName" value="${redis.server.host}"/>
         <constructor-arg name="port" value="${redis.server.port}"/>
         <constructor-arg name="password" value="${redis.server.password}"/>
